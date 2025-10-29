@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FareMakers - Flight Search (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="contact">We only call from one number : <strong>03111147111</strong></span>
+    </div>
+    <div class="topbar-right">
+      <a class="link">Banks</a>
+      <a class="link">Support</a>
+      <a class="link">SignUp/Login</a>
+    </div>
+  </header>
+
+  <div class="brand-row">
+    <div class="logo-placeholder">faremakers</div>
+    <h1 class="site-title">FareMakers <small>Travel Channel Int'l (Pvt.) Ltd</small></h1>
+  </div>
+
+  <section class="search-banner">
+    <div class="search-card">
+      <div class="left">
+        <div class="trip-types">
+          <button class="pill active" data-type="round">ROUND TRIP</button>
+          <button class="pill" data-type="oneway">ONEWAY</button>
+          <button class="pill" data-type="multicity">MULTI CITY</button>
+        </div>
+
+        <div class="row fields">
+          <div class="field">
+            <label>Leaving From</label>
+            <input id="from" placeholder="City or Airport" />
+          </div>
+          <div class="swap">⇄</div>
+          <div class="field">
+            <label>Going To</label>
+            <input id="to" placeholder="City or Airport" />
+          </div>
+          <div class="field dates">
+            <label>Departure Date</label>
+            <input id="depart" type="date" />
+            <label class="return-label">Return Date</label>
+            <input id="return" type="date" />
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="meta">
+          <div>Fly anywhere. Fly everywhere.</div>
+          <div class="passenger">1 Adult, Economy ▾</div>
+        </div>
+        <button id="searchBtn" class="search-btn">SEARCH</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="results" class="results">
+      <h2>Search Results</h2>
+      <div id="flightsList" class="flights-list">No search yet.</div>
+    </section>
+
+    <section id="seatArea" class="seat-area hidden">
+      <h2>Seat Map for <span id="flightName"></span></h2>
+      <div id="seatContainer" class="seat-container"></div>
+      <button id="bookSeatsBtn" class="book-btn">Book Selected Seats</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© FareMakers Demo · This is a local demo app</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
